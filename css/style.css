@@ -1,0 +1,141 @@
+/* Reset css elements */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General css elements */
+
+html{
+  font-size: 15px;
+}
+
+/* variables */
+
+:root{
+
+  /* padding */
+  --main-padding:50px;
+
+  /* font_family */
+  --main-font-family:'Lexend Deca', sans-serif;
+  --secondary-font-family: 'Big S;houlders Display', cursive;
+
+  /* font-weights */
+
+  --main-font-weight:400;
+  --secondary-font-weight:700;
+
+  /*### Primary colors */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  
+ /* ### Neutral colors */
+
+ --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+ --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 950px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+h1{
+  color: var(--Very-light-gray-background-headings-buttons);
+  font-family: var(--main-font-family);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+p{
+  color: var(--Transparent-white-paragraphs);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 85px;
+}
+
+button{
+  border: none;
+  padding: 12px 25px;
+  border-radius:20px;
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: var(--main-font-weight) ;
+}
+
+.sedans{
+  background-color: var(--Bright-orange);
+  padding: var(--main-padding);
+  
+}
+
+.sedans button{
+  color: var(--Bright-orange);
+}
+
+.suvs{
+  background-color: var(--Dark-cyan);
+  padding: var(--main-padding);
+}
+
+.suvs button{
+  color: var(--Dark-cyan);
+}
+
+.luxary{
+  background-color: var(--Very-dark-cyan);
+  padding: var(--main-padding);
+}
+
+.luxary button{
+  color: var(--Dark-cyan);
+}
+
+/* ---------------media queries---------- */
+
+@media screen and (max-width:575px) {
+  .container{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 74px;
+    overflow: hidden;
+  }
+  
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  .container{
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 74px;
+    overflow: hidden;
+  }
+  
+}
+
